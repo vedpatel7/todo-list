@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Your Todo List</title>
+    <style>
+        body{
+        background-color:#F08A5D ;
+        font-family: 'Baloo 2', cursive;
+        overflow:hidden;
+        display:flex;
+        justify-content:center;
+        align-items:center;
+        height:100vh;
+
+        }
+
+        .container{
+        background-color: #F9ED69;
+        border-radius:30px;
+        min-width:350px;
+        max-width:550px;
+
+        padding:10px;
+        max-height:600px;
+        z-index:100;
+
+
+
+        }
+        .todos-wrapper{
+        display:flex;
+        justify-content:space-between;
+        align-items:center;
+        width:100%;
+        margin:10px;
+        border-bottom:2px solid black;
+        padding-bottom:5px;
+        position:relative;
+        }
+        .delete-link{
+        }
+        .task-title{
+
+        display:flex;
+        align-items:center;
+        gap:10px;
+        font-size:2rem;
+        max-width:500px;
+        overflow-x:hidden;}
+
+
+        .task-complete{
+        height:30px;
+        width:30px;
+        border-radius:50%;
+        background-color:gray;
+        position:absolute;
+        left:0px;
+
+        }
+        #task-text{
+        text-decoration:none;
+        color:white;
+        }
+
+        .task-incomplete{
+        height:30px;
+        width:30px;
+        border-radius:50%;
+        background-color:green;
+        position:absolute;
+        left:0px;
+        }
+
+        .todos{
+        max-height:300px;
+        overflow:scroll;
+        overflow-x:hidden;
+
+        margin:10px 5px;
+
+        display:flex;
+        flex-direction:column;
+        justify-content:center;
+        align-items:center;
+        width:100%;
+
+        }
+        .todos a{
+        color:white;
+        text-decoration:none;
+        font-weight:200;
+        text-shadow:2px 2px 4px black;
+        padding-left:35px;
+        }
+        h1,h2,h3,h4,h5{
+        font-family:Arial, Helvetica, sans-serif;
+        }
+        p{
+        color:aqua;
+        text-decoration:none;
+        font-weight:800;
+        text-shadow:2px 2px 4px black;}
+
+        .header{
+
+        display:flex;
+        justify-content:space-between;
+        padding:10px;
+        color:white;
+        border-radius:10px 10px 0px 0px;
+        margin:10px;
+        background-color:#B83B5E ;
+        }
+        .header a{
+        color:#F9ED69;
+        text-decoration:none;
+        font-weight:800;
+        text-shadow:2px 2px 4px black;
+        }
+        .todo-head{
+        display:flex;
+        flex-direction:column;
+        align-items:center;
+        z-index:50;
+        }
+        .search-add{
+        display:flex;
+        width:100%;
+        justify-content:space-between;
+        align-items:center;
+        }
+        .input{
+        padding:4px;
+        border:none;
+        background-color: transparent;
+        border-bottom:2px solid black;
+        outline:none;
+        }
+        .search-add a,.search-button{
+        background-color:#F08A5D;
+        padding:2px;
+        border-radius:5px;
+        text-decoration:none;
+        color:white;
+        font-weight:800;}
+
+
+        .button{
+        font-size:1.5rem;
+        border-radius:20px;
+        padding:5px;
+        background-color:aqua;
+        font-weight:900;
+        color:Black;
+        background-color:#B83B5E;
+
+        }
+        ::-webkit-scrollbar{
+        width:1rem;}
+        ::-webkit-scrollbar-track{
+        background-color:#B83B5E;
+        border-radius:0.5rem;
+        }
+        ::-webkit-scrollbar-thumb{
+        width:1rem;
+        border-radius:10px;
+        border:2px solid #B83B5E;
+        background-color:#F9ED69;}
+
+
+    </style>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Baloo+2&display=swap" rel="stylesheet">
+</head>
+<body>
+<div class="container">
+    {% block content %}
+    {% endblock content%}
+
+</div>
+
+</body>
+</html>
